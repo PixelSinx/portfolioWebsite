@@ -1,0 +1,182 @@
+@font-face { font-family: caslon; src: url('font/cas_antn.ttf'); }
+@font-face { font-family: beckett; src: url('font/BECKETT_.TTF'); }
+
+/*       Name: Brody Holmer
+         Date: 11/19/15
+         Description: Hometown Project
+*/
+
+
+body {
+  background: -webkit-linear-gradient(left top, LightGreen, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, LightGreen, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, LightGreen, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, LightGreen , white); /* Standard syntax */
+font-family: caslon, arial, sans-serif;
+font-size: 1.1em;}
+#wrapper { margin: auto; width: 80%;
+        min-width: 960px; background-color: green;
+        box-shadow: 5px 5px 5px #2e0000; }
+img { border-style: none; max-width: 100%; height: auto;}
+
+
+/* header content */
+
+header, hgroup, nav, footer, figure, figcaption, aside,
+section, article
+{ display: block; }
+
+header {background-color: green; color: green;}
+
+h1 { background-image : url(images/Frazee.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+    height: 100px;
+    color: Green;
+    text-align: center;
+    font-size: 3.0em;
+    }
+.banner { animation-name: fadein;
+	animation-duration: 3s;
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 3s;
+	-moz-animation-name: fadein;
+	-moz-animation-duration: 3s;
+	-o-animation-name: fadein;
+	-o-animation-duration: 3s;
+	
+}
+h2 { font-family: beckett; font-size: 2.0em; text-decoration: underline;}
+h3 { background-color :#BDBDBD;
+    text-transform: uppercase;}
+/* end header content */ 
+  
+    
+/* navigation */
+
+nav {width: auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;}
+nav ul { text-align: center;
+        padding: 0;
+        font-size: 1.2em;
+        list-style-type: none; }
+nav li { display: inline; padding-top: 0; padding-bottom: 0;
+padding-left: 0.75em; padding-right: 0.75em;}
+nav a { text-decoration:  none; }
+
+nav a:link { color: black;}
+nav a:visited { color: gray; }
+nav a:hover { color: #F5F5DC; }
+/* end navigation*/
+
+
+/* body content */
+
+#content {padding: 1px 20px 20px 20px;
+        background-color: #D8D8D8;}
+#frazee h2 {text-align: center;}
+#event p {margin-right: 55%;}
+#event {height: 350px;}
+#event img {width: 200px; height: 200px; float: none;}
+#event h2 {text-align: center;}
+#content img { float: right; width: 50%; padding-top: 20px; max-height: 300px;}
+#featInfo { height: 400px; text-align: left; padding-right: 40px; }
+#featInfo2 { height: 400px; text-align: left; padding-right: 40px; }
+#contentMain {padding: 1px 20px 20px 20px;
+        background-color: #D8D8D8;}
+#contentMain img { float: right; width: 50%; padding-top: 20px; max-height: 400px;}
+/* end body content */
+
+
+/* footer */
+footer {background-color: green; color: green; padding: 20px; box-shadow: 5px 5px 5px #2e0000; text-align: center;}
+/* end footer */
+
+/*Animation keyframes */
+
+@keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-webkit-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-moz-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-o-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+/* end animation keyframes */
+
+/* media queries */
+@media (min-width: 481px) and (max-width: 768px) {
+   #wrapper { width: auto;
+   min-width: 480px;}
+   img {float: none;
+        display: none;}
+   #featInfo {margin: auto;
+   height: auto;
+   text-align: center;
+   padding: 0px;}
+   #event p {margin: auto;}
+   #event {height: auto;}
+}  
+   
+@media (max-width: 480px) {
+  nav li {display: block; height: 50px; text-align: center;}
+   #wrapper { width: auto;
+   min-width: 100px;}
+   img {float: none;
+        display: none;}
+   #featInfo {margin: auto;
+   height: auto;
+   text-align: center;
+   padding: 0px;}
+   #event p {margin: auto;}
+   #event {height: auto;}
+}
+/* end media queries */
+
+/* embeded video */
+.video {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}

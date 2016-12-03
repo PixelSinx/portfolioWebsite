@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="stylesheet" href="hometown.css">
+    <!-- Name: Brody Holmer
+         Date: 11/29/15
+         Description: Hometown Project
+    -->
+    <title>Hometown Project</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script
+    src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1 class="banner"><strong>About Frazee</strong></h1>
+    </header>
+<div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="content">
+    
+<h2>Frazee</h2>
+    <p>Frazee is a town that is known for its history in turkey farming, and many of its residents have grown up doing something involving turkeys at one point or another. There was even a statute erected to symbolize this part of Frazee.</p>  
+        <div>
+        <h2>Frazee Wrestling</h2>
+        <!-- Modify the width, height and viewbox values if necessary to hold all of your text -->
+<svg width="3in" height="2in" viewBox="0 0 600 300"
+     xmlns="http://www.w3.org/2000/svg"
+     onload="StartAnimation(evt)" version="1.1">
+  <script type="application/ecmascript"><![CDATA[
+    var timevalue = 0;
+    var timer_increment = 50;
+    var max_time = 5000;
+    var text_element;
+    function StartAnimation(evt) {
+      text_element = evt.target.ownerDocument.getElementById("TextElement");
+      ShowAndGrowElement();
+    }
+    function ShowAndGrowElement() {
+      timevalue = timevalue + timer_increment;
+      if (timevalue > max_time)
+        return;
+      // Scale the text string gradually until it is 20 times larger
+      scalefactor = (timevalue * 20.) / max_time;
+      text_element.setAttribute("transform", "scale(" + scalefactor + ")");
+      // Make the string more opaque
+      opacityfactor = timevalue / max_time;
+      text_element.setAttribute("opacity", opacityfactor);
+      // Call ShowAndGrowElement again <timer_increment> milliseconds later.
+      setTimeout("ShowAndGrowElement()", timer_increment)
+    }
+    window.ShowAndGrowElement = ShowAndGrowElement
+  ]]></script>
+  
+  <!-- Modify the measurements in the next lines to define the area, size, colors of the text and rectangle -->
+  <rect x="10" y="10" width="550" height="200"
+        fill="green" stroke="black" stroke-width="6"/>
+  <g transform="translate(50,150)" fill="white" font-size="7">
+    
+  <!-- Modify the text in the next line to the name of your hometown high school mascot -->
+    <text id="TextElement">Hornets</text>
+  </g>
+</svg>
+
+<p>Frazee is also known for its high school wrestling team, and how well they have done through the years and its annual turkey days event that is held there every summer.</p>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jA0xZG4AneU" frameborder="0" allowfullscreen></iframe>
+        </div>
+<footer>
+        <nav>
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="events.html">Events</a></li>
+           </ul>  
+        </nav>
+        <a href="mailto:BrodyHolmer1@gmail.com">BrodyHolmer1@gmail.com</a>
+        <br>
+</footer>
+</div>
+</div>
+</html>
+
