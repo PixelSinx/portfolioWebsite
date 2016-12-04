@@ -1,0 +1,139 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
+html {
+	background-color: #0489B1;
+}
+body {
+	background-color: #2E64FE;
+	border: 3px solid orange;
+	box-shadow: 0 0 15px 5px rgba(44,82,100,75);
+	width: 760px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+	background: -webkit-linear-gradient(left top, blue , orange); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom right, blue, orange); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom right, blue, orange); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom right, blue, orange); /* Standard syntax */
+}
+h1 {
+	font-size: 2.75em;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	text-align: center;
+	letter-spacing: 1px;
+	color: orange;
+	text-transform: uppercase;
+	padding: 5px 15px 2px 15px;
+	margin: 0 -15px 20px -15px;
+}
+h2 {
+	font-size: 1.5em;
+	font-family: 'Lato', sans-serif;
+	color: orange;
+	border-top: 2px dashed rgb(141,165,22);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 15px 0 5px 0;
+	overflow: hidden;
+}
+h3 {
+	font-size:  1.2em;
+	font-family:  'Lato', sans-serif;
+	color: orange;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 15px 0 5px 0;
+}
+.sidebar {
+	width: 30%;
+	float: right;
+	margin: 10px;
+	background-color: orange;
+	padding: 10px 20px;
+	border: 1px dotted black;
+	border-top: 20px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+.sidebar h2 {
+	border: none;
+	margin-top: 0;
+	padding: 0;
+}
+h1 {background-image : url(images/bg_banner.jpg);
+	height: 120px;}
+
+#title{
+	background-image : none;
+	height: auto;
+	background-color: black;
+}
+figure {
+	float: right;
+	width: 222px;
+	margin: 15px 10px 5px 10px;
+}
+figure img {
+	border: 1px solid #666;
+	background-color: orange;
+	padding: 10px;
+}
+figcaption {
+	font: bold 1em/normal verdana, arial, helvetica, sans-serif;
+	color: #333;
+	text-align: center;
+	background-color: orange;
+	border: 1px dashed #666;
+	padding: 5px;
+	float: left;
+}
+a:link {
+	color: black;
+}
+a:visited {
+	color: orange;
+}
+a:hover {
+	color: white;
+}
+nav {width: auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;}
+nav ul { text-align: center;
+        padding: 0;
+        font-size: 1.2em;
+        list-style-type: none; }
+nav li { display: inline; padding-top: 0; padding-bottom: 0;
+padding-left: 0.75em; padding-right: 0.75em;}
+nav a { text-decoration:  none; }
