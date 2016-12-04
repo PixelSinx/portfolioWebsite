@@ -1,0 +1,282 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>About Me</title>
+<style>
+  /* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+
+/* end reset browser styles */
+html {
+  background-color: #0489B1;
+}
+
+body {
+	margin: 0 auto;	
+	background: -webkit-linear-gradient(left top, blue , orange); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(bottom right, blue, orange); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(bottom right, blue, orange); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to bottom right, blue, orange); /* Standard syntax */
+        width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 3px solid orange;
+
+}
+h1 {
+	font: italic normal 3em Baskerville, "Palatino Linotype", "Times New Roman", serif;
+	color: orange;
+	padding-left: 2px;
+}
+h2 {
+	font-size: 1.5em;
+	font-family: 'Lato', sans-serif;
+	color: orange;
+	border-top: 2px dashed rgb(141,165,22);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 15px 0 5px 0;
+	overflow: hidden;
+}
+.PC {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+}
+.PC caption {
+  text-align: right;
+  font-size: .85em;
+  margin-bottom: 10px;
+}
+.PC td, .inventory th {
+  font-size: 1.1em;
+  border: 1px solid #DDB575;
+  padding: 3px 7px 2px 7px;
+}
+.PC th {
+  text-transform:uppercase;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background: rgb(229,76,16);
+  background: -webkit-linear-gradient(rgb(229,76,16), rgb(173,54,8));
+  background: -moz-linear-gradient(rgb(229,76,16), rgb(173,54,8));
+  background: -o-linear-gradient(rgb(229,76,16), rgb(173,54,8));
+  background: linear-gradient(rgb(229,76,16), rgb(173,54,8));
+  color: white;
+}
+.PC tr:nth-of-type(even){
+  background-color: rgba(255,255,255,.1);
+}
+.PC tr:nth-of-type(odd){
+  background-color: rgba(229,76,16,.1);
+}
+a:link {
+	color: blue;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: white;
+	text-decoration: underline;
+	font-style: italic;
+}
+a:active {
+	textdecoration: underline;
+	font-style: italic;
+}
+nav {width: auto;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;}
+nav ul { text-align: center;
+        padding: 0;
+        font-size: 1.2em;
+        list-style-type: none; }
+nav li { display: inline; padding-top: 0; padding-bottom: 0;
+padding-left: 0.75em; padding-right: 0.75em;}
+nav a { text-decoration:  none;
+	display: inline-block;
+	background: #ff932d;
+	border-radius: 10px;
+	border: 2px solid #c95e00;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;}
+	
+.navButton {
+	background-color: orange;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	transition-property: background-color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+.navButton:hover {
+	background-color: blue;
+}
+}
+@keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-webkit-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-moz-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-o-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+.banner {
+	background-image : url(images/bg_banner.jpg);
+	height: 120px;
+	transform: skew(5deg, 0);
+	animation-name: fadein;
+	animation-duration: 3s;
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 3s;
+	-moz-animation-name: fadein;
+	-moz-animation-duration: 3s;
+	-o-animation-name: fadein;
+	-o-animation-duration: 3s;
+	
+}
+</style>
+</head>
+
+<body>
+	<h1 class="banner">About Me</h1>
+	<div>
+    <nav>
+        <ul>
+            <li><a class="navButton" href="index.html">Home</a></li>
+            <li><a class="navButton" href="news.html">News</a></li>
+            <li><a class="navButton" href="blog.html">Blog</a></li>
+            <li><a class="navButton" href="gallery.html">Gallery</a></li>
+            <li><a class="navButton" href="about.html">About Me</a></li>
+            <li><a class="navButton" href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+</div>
+	<br>
+	<h2>About Me</h2>
+        <p>Hi, my name is Brody Holmer. I'm currently going to college online at M State through the E-Campus, I'm currently working towards degrees in the Computer Programming and Web Development field.
+        I'm also currently working at BTD in Detroit Lakes as a Production Setup.</p>
+        <p>So far I've learned a lot about programming, and I've learned to constantly try and implement something new each time I code something.
+        Which is why this website will be perfect for me to test new CSS and HTML ideas.</p>
+    </div>
+        <div>
+        <h2>My Skill set</h2>
+        <ul>
+            <li>Programming Languages: Python, COBOL, C++, Visual Basic, RobotC, Java, and a little bit of SQL.</li>
+            <li>Web Languages: HTML 5, CSS 3.</li>
+            <li>Other: Computer Repair, Computer Assembly, and a little bit of networking.</li>
+        </ul>
+        </div>
+	<h2>Current PC</h2>
+	<table class="PC" width="100%">
+		
+		<colgroup>
+			<col id="product">
+			<col id="type">
+			<col id="spec">
+		</colgroup>
+		<tr>
+			<th scope="col">Product</th>
+			<th scope="col">Type</th>
+			<th scope="col">Spec</th>
+		</tr>
+		<tr>
+			<td> Intel 4790K</td>
+			<td>CPU</td>
+			<td> 4.4GHz Quad Core</td>
+		</tr>
+		<tr>
+			<td>R9 290 Tri-X</td>
+			<td>GPU</td>
+			<td> 1GHz, 4GB Frame Buffer</td>
+		</tr>
+		<tr>
+			<td>Gigabyte GA-Z97X-UD3H-BK ATX LGA1150</td>
+			<td>Motherboard</td>
+			<td>Crossfire/SLI</td>
+		</tr>
+		<tr>
+			<td>G Skill Ripjaws X Series</td>
+			<td>RAM</td>
+			<td>16GB DDR3-1866MHz</td>
+		</tr>
+		<tr>
+			<td>Sandisk Ultra II SSD/Western Digital Black HDD</td>
+			<td>Storage</td>
+			<td>480GB/2TB 7200RPM</td>
+		</tr>
+		<tr>
+			<td>Thermaltake Overseer RX-I Snow-Edition</td>
+			<td>Case</td>
+			<td>USB 3.0, External SATA Connectors</td>
+		</tr>
+		<tr>
+			<td>Rosewill Photon</td>
+			<td>Power Supply</td>
+			<td>750W 80+ Gold</td>
+		</tr>
+	</table>
+</body>
+</html>
