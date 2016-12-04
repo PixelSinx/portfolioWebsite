@@ -1,0 +1,230 @@
+/*
+  -------------------------------------------------------
+  CSS:		WebBlogCSS-GalleryCSS
+  Last Updated: 4/19/15
+  Author:	Brody Holmer
+  -------------------------------------------------------
+*/
+
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol { 
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+/* end reset browser styles */
+html {
+  background-color: #0489B1;
+}
+/*added nav badge */
+nav .badge {
+	position: absolute;
+	z-index: 1;
+	float: left;
+	margin-top: -10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+}
+
+body {
+        font-size: 62.5%;
+	background-color: #2E64FE;
+        width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 3px solid orange;
+}
+.content {
+	margin-left: 15px;
+	margin-top: 15px;
+	border: 1px solid orange;
+	border-right: none;
+	border-bottom: none;
+}
+.gallery {
+	margin-left: 15px;
+	border-left: 1px solid orange;
+}
+h1 {
+	font: normal 2.4em Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	border-bottom: 1px solid orange;
+	padding: 5px 0 5px 8px;
+	color: orange;
+}
+p {
+	font: 1.6em/160% Georgia, "Times New Roman", Times, serif;
+	margin: 10px 8px;
+}
+figure {
+  display: inline-block;
+  vertical-align: top;
+  width: 210px;
+  margin: 0 10px 10px 10px;
+}
+
+figure img {
+  border: 1px solid #666;
+  background-color: #FFF;
+  padding: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+
+figcaption {
+  font: 1.1em/normal Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+.textsize {
+    font-size: 1.2em;
+}
+/* Link Styles */
+a:link {
+	color: blue;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: white;
+	text-decoration: underline;
+	font-style: italic;
+}
+a:active {
+	textdecoration: underline;
+	font-style: italic;
+}
+/* End Link Styles */
+/* Nav Styles */
+nav {width: auto;
+    font-size: 180%;
+    font-weight: bold;
+    text-decoration: none;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    position: relative;}
+nav ul { text-align: center;
+        padding: 0;
+        font-size: 1.2em;
+        list-style-type: none; }
+nav li { display: inline; padding-top: 0; padding-bottom: 0;
+padding-left: 0.75em; padding-right: 0.75em;}
+nav a { text-decoration:  none;
+	display: inline-block;
+	background: #ff932d;
+	border-radius: 10px;
+	border: 2px solid #c95e00;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;}
+	
+.navButton {
+	background-color: orange;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	transition-property: background-color;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+.navButton:hover {
+	background-color: blue;
+}
+}
+/* End Nav Styles */
+/* Animation Styles */
+@keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-webkit-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-moz-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+@-o-keyframes fadein{
+	from{
+		opacity: 0;
+	}
+to{
+	opacity: 1;
+}
+
+}
+/* End Animation Styles */
+/* Banner Styles */
+.banner {
+	background-image : url(images/bg_banner.jpg);
+	height: 120px;
+	transform: skew(5deg, 0);
+	animation-name: fadein;
+	animation-duration: 3s;
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 3s;
+	-moz-animation-name: fadein;
+	-moz-animation-duration: 3s;
+	-o-animation-name: fadein;
+	-o-animation-duration: 3s;
+	
+}
+/* End Banner Style */
+
+/* Caption Hover */
+figure figcaption {
+	opacity: 0;
+	-webkit-transition: opacity .75s ease-out;
+	-moz-transition: opacity .75s ease-out;
+	-o-transition: opacity .75s ease-out;
+}
+figure:hover figcaption {
+	opacity: 1;
+}
+/*End Caption Hover */
+
+
