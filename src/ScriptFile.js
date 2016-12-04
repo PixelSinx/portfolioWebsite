@@ -10,6 +10,10 @@ $('#currentDate').text(localdate)
 document.getElementById("CurrentDateID").innerHTML = localdate;
 }
 
+
+
+
+
 //slides the navigation bar into the frame
 $(document).ready(function() {
   $('#dashboard').hover(
