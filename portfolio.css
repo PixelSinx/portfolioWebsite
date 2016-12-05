@@ -37,8 +37,8 @@ nav ul { text-align: center;
         font-size: 1.2em;
         list-style-type: none; }
 nav li { display: inline; padding-top: 0; padding-bottom: 0;
-padding-left: 0.75em; padding-right: 0.75em;}
-nav a { text-decoration:  none; }
+padding-left: 0.6em; padding-right: 0.6em;}
+nav a { text-decoration:  none; text-align: center; display: block;  margin-bottom: -10px; margin-top: -10px;}
 nav a:link { color: black;}
 nav a:visited { color: gray; }
 nav a:hover { color: cyan; }
@@ -89,6 +89,7 @@ span.text-content span {display: table-cell; text-align: center; vertical-align:
 ul.img-list li:hover span.text-content {opacity: 1;}
 footer {background-color: rgb(27,45,94); color: white; padding: 20px;
  font-size: .60em; font-style: italic; text-align: center; border-radius: 20px 20px 20px 20px;}
+footer a {display: inline;}
 footer a:link { color: orange;}
 footer a:visited { color: gray;}
 footer a:hover { color: cyan;}
@@ -207,7 +208,7 @@ div.redux2 {
 #dashboard {
 width: 200px;
 background-color: rgb(27,45,94);
-padding: 20px 20px 20px 20px;
+padding: 5px 20px 5px 20px;
 position: fixed;
 left: -215px;
 z-index: 100;
@@ -218,7 +219,7 @@ border-radius: 5px 50px 30px 5px;
    header {width: auto; max-width: 768px;}
    body { width: auto; }
    nav { max-width: 768px; width: auto;}
-   nav a {display: block; border: 2px solid rgb(255,140,0); font-size: 1.20em;}
+   nav a {display: block; border: 2px solid rgb(255,140,0); font-size: 1.2em; margin-bottom: 0; margin-top: 0;}
    #wrapper {width: auto !important;}
    #content {width: auto; max-width: 768px;}
    #featInfo {height: auto; max-width: 768px; padding-bottom: 50px; }
