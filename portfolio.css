@@ -219,14 +219,11 @@ border-radius: 5px 50px 30px 5px;
    header {width: auto; max-width: 768px;}
    body { width: auto; }
    nav { max-width: 768px; width: auto;}
-   nav a {display: block; border: 2px solid rgb(255,140,0); font-size: 1.2em; margin-bottom: 0; margin-top: 0;}
    #wrapper {width: auto !important;}
    #content {width: auto; max-width: 768px;}
    #featInfo {height: auto; max-width: 768px; padding-bottom: 50px; }
    #featInfo img {width: 75%; height: 75%;}
-   #dashboard {left: 0px; width: auto; max-width: 768px; z-index: 0; position: relative; border-radius: 0px 0px 30px 30px;
-   padding: 0px 10px 0px 10px;}
-   footer {font-size: 1.2em;}
+   footer {font-size: 1.1em;}
  
   ul.tabs {
   text-align: center;
