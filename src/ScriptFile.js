@@ -12,8 +12,8 @@ document.getElementById("CurrentDateID").innerHTML = localdate;
 
 
 //slides the navigation bar into the frame
-if ($(window).width() >=768){
-$(document).ready(function() {
+
+$(document).ready(function() { 
   $('#dashboard').hover(
      function() {
 		$(this).stop().animate(
@@ -37,7 +37,7 @@ $(document).ready(function() {
 	 }
   ); // end hover
 }); // end ready
-}
+
 //Opens external links in a new window/tab
 $(document).ready(function(){
  $("a[href^='http'],a[href^='https']").attr('target','_blank');

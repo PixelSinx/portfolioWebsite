@@ -6,9 +6,9 @@ body {
 font-family: verdana,
 arial, sans-serif;}
 #wrapper { margin: auto; width: 95%;
-        min-width: 960px; background-color: #F0F0F0;
-        box-shadow: 5px 5px 5px #2e0000; border-radius: 20px 20px 0px 0px;  }
-#mainContainer { margin: auto; width: 85%;}
+         background-color: #F0F0F0;
+        box-shadow: 5px 5px 5px #2e0000; border-radius: 20px 20px 20px 20px;  }
+#mainContainer { margin: auto; width: 90%;}
 
 img { border-style: solid; border-radius: 20px 20px 20px 20px; max-width: 100%; height: auto;}
 
@@ -37,11 +37,11 @@ nav ul { text-align: center;
         font-size: 1.2em;
         list-style-type: none; }
 nav li { display: inline; padding-top: 0; padding-bottom: 0;
-padding-left: 0.75em; padding-right: 0.75em;}
-nav a { text-decoration:  none; }
+padding-left: 0.6em; padding-right: 0.6em;}
+nav a { text-decoration:  none; text-align: center; display: block;  margin-bottom: -10px; margin-top: -10px;}
 nav a:link { color: black;}
-nav a:visited { color: cyan; }
-nav a:hover { color: blue; }
+nav a:visited { color: gray; }
+nav a:hover { color: cyan; }
 .nav a, .example {
 	display: inline-block;
 	font-family: 'ColaborateLightRegular', Arial, sans-serif;
@@ -71,14 +71,10 @@ nav a:hover { color: blue; }
   
 }
 
-#content {padding: 1px 20px 20px 20px;}
-#featInfo { text-align: center; height: auto; padding-right: 40px; }
+#content {padding: 20px 20px 20px 20px;}
+#featInfo { text-align: center; height: auto; }
 #featInfo img  {max-width: 500px; max-height: 350px;}
 #news {text-align: center; height: auto;}
-#HomeBlog {text-align: center; overflow: auto; padding: 20px; height: auto;}
-#LProject {text-align: center; min-height: 350px; padding-bottom: 20px;}
-#LProject h3 {font-size: 1.2em;}
-#LProject img {float: right; height: 300px; width: 45%;}
 #PastProjects {text-align: center; padding-bottom: 20px;}
 #PastProjects img {float: none; width: 200px; height: 200px;}
 ul.img-list {list-style-type: none; margin: 0; padding: 0; text-align: center;}
@@ -93,6 +89,7 @@ span.text-content span {display: table-cell; text-align: center; vertical-align:
 ul.img-list li:hover span.text-content {opacity: 1;}
 footer {background-color: rgb(27,45,94); color: white; padding: 20px;
  font-size: .60em; font-style: italic; text-align: center; border-radius: 20px 20px 20px 20px;}
+footer a {display: inline;}
 footer a:link { color: orange;}
 footer a:visited { color: gray;}
 footer a:hover { color: cyan;}
@@ -118,17 +115,18 @@ li.tab {
 li.tab.selected { background-color: orange; }
 
 ul.tabs {
+  text-align: center;
   font-size: 12px;
   line-height: 1;
   list-style: none outside none;
-  margin: 10px;
+  margin: auto;
   padding: 5px;
   position: absolute;
   top: 0;
 }
 
 div.redux {
-  margin-top: 10px;
+  margin-top: auto;
   font-family: "Helvetica", "san-serif";
   font-size: 24px;
 }
@@ -140,7 +138,7 @@ div.redux2 {
   font-size: 20px;
   margin-bottom: 20px;
   padding: 10px;
-  padding-top: 75px;
+  padding-top: 100px;
   position: relative;
   border-radius: 15px 15px 15px 15px;
 }
@@ -210,40 +208,47 @@ div.redux2 {
 #dashboard {
 width: 200px;
 background-color: rgb(27,45,94);
-padding: 20px 20px 20px 20px;
+padding: 5px 20px 5px 20px;
 position: fixed;
 left: -215px;
 z-index: 100;
 border-radius: 5px 50px 30px 5px;
-}  
-@media (min-width: 481px) and (max-width: 769px) {
+}
+
+@media (max-width: 768px) {
    header {width: auto; max-width: 768px;}
    body { width: auto; }
    nav { max-width: 768px; width: auto;}
-   nav a {display: block; border: 2px solid rgb(255,140,0); font-size: 1.20em;}
    #wrapper {width: auto !important;}
    #content {width: auto; max-width: 768px;}
-   #featInfo {height: auto; max-width: 768px; margin-right: 10%; padding-bottom: 50px; }
-   #content img {float: right; height: 20%; width: 20%;}
-   #dashboard {left: 0px; width: auto; max-width: 768px; z-index: 0; position: relative; border-radius: 0px 0px 30px 30px;
-   padding: 0px 10px 0px 10px;}
-   footer {font-size: 1.2em;}
-   div.redux2 {padding-top: 100px;}
-  }
+   #featInfo {height: auto; max-width: 768px; padding-bottom: 50px; }
+   #featInfo img {width: 75%; height: 75%;}
+   footer {font-size: 1.1em;}
  
-
-@media (max-width: 480px) {
-    header {width: auto; max-width: 480px;}
-    nav { max-width: 480px; width: auto;}
-    nav a {display: block; border: 2px solid rgb(255,140,0); font-size: 1.20em;}
-    #wrapper {width: auto !important;}
-   #content img {display: none; }
-   #featInfo {width: auto; margin: 0; max-width: 350px; height: auto;}
-   #dashboard {left: 0px; width: auto; max-width: 460px; z-index: 0; position: relative; border-radius: 0px 0px 30px 30px;
-   padding: 0px 10px 0px 10px;}
-   footer {font-size: 1.20em;}
-   div.redux2 {padding-top: 150px;}
+  ul.tabs {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1;
+  list-style: none outside none;
+  position: absolute;
+  top: 0;
 }
+div.redux2 {
+    padding-top: 200px;
+  }
+  
+  li.tab {
+  width: 120px;
+  height: 60px;
+}
+   }
+
+@media (max-width: 500px){
+  div.redux2 {
+    padding-top: 350px;
+  }
+}
+
 
 
 
