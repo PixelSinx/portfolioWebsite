@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+Name:Brody Holmer
+Date:4/23/16
+Description: JQuery About Page
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>About</title>
+<link href="custom-site.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="src/readingTime.js"></script>
+<script>
+ //FAQ script that shows and hides the answers
+$(document).ready(function() {
+ $('.answer').hide();
+ $('.main h2').click(function() {
+ 	var $answer = $(this).next('.answer');
+	if ($answer.is(':hidden')) {
+		$answer.slideDown();
+		$(this).addClass('close');
+	} else {
+		$answer.fadeOut();
+		$(this).removeClass('close');
+	}
+ }
+	); // end click
+}); // end ready
+</script>
+<script>//slides the navigation bar into the frame
+$(document).ready(function() {
+  $('#dashboard').hover(
+     function() {
+		$(this).stop().animate(
+		{
+			left: '0',
+			backgroundColor: 'rgb(255,140,0)'
+		},
+		500,
+		'easeInSine'
+		); // end animate
+	 }, 
+	 function() {
+		 $(this).stop().animate(
+		{
+			left: '-150px',
+			backgroundColor: 'rgb(27,45,94)'
+		},
+		1500,
+		'easeOutBounce'
+		); // end animate
+	 }
+  ); // end hover
+}); // end ready
+</script>
+<script>//open external links in a new window
+$(document).ready(function(){
+ $("a[href^='http'],a[href^='https']").attr('target','_blank');
+}); 
+</script>
+<script>//estimates how long it will take to read the main portion of the page		
+$(function() {
+	$('article').readingTime({
+	wordCountTarget: '.words',
+});
+});</script>
+<script>//shows the current date in the footer
+window.onload = function() {
+showDate();
+}
+function showDate() {
+var dNow = new Date();
+var localdate= (dNow.getMonth()+1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
+$('#currentDate').text(localdate)
+document.getElementById("CurrentDateID").innerHTML = localdate;
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+	    <h1>Brody Holmer Javascript</h1>
+	</header>
+<div id="dashboard">
+<div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+	<article>
+	 
+	<div class="content">
+	<div class="main">
+	<h1>About</h1>
+	<p><small><span class="eta"></span> (<span class="words"></span> words)</small></p>
+	<div class="faq">
+	<h2>AMD Current Generation</h2>
+	    <div class="answer">
+	        <p>AMDs current generation GPU's are known for being a cheaper alternative to NVIDIAs current lineup, but they also aren't as energy efficient and are slightly less powerful than NVIDIAs offerings.</p>
+	     <a href="http://www.amd.com/en-us">AMDs Home Page</a>
+	      </div>
+	</div>
+	<div class="faq">
+	      <h2>NVIDIA Current Generation</h2>
+	      <div class="answer">
+	        <p>NVIDIA currently has the most powerful and most efficient single GPU card available on the market. But, these cards also come at a higher cost than AMDs offerings.</p>
+	      <a href="http://www.nvidia.com/content/global/global.php">NVIDIAs Home Page</a>
+	      </div>
+	</div>
+	<div class="faq">
+	      <h2>AMD Next Generation</h2>
+	      <div class="answer">
+	        <p>AMDs next generation of GPUs are slated to be atleast 2x more efficient then their current generation cards, while also doubling the amount of transistors.</p>
+	      <a href="http://www.amd.com/en-us">AMDs Home Page</a>
+	      </div>
+	</div>
+	<div class="faq">
+	      <h2>NVIDIA Next Generation</h2>
+	      <div class="answer">
+	        <p>NVIDIAs next generation cards aim to continue increasing their power efficiency, while also adding new features like NVLink and possibly the ability to use SLI without requiring a connecting bridge.</p>
+		<a href="http://www.nvidia.com/content/global/global.php">NVIDIAs Home Page</a>
+	</article>
+      	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<footer>
+	 <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+	<a href="mailto:BrodyHolmer1@gmail.com">BrodyHolmer1@gmail.com</a>
+        <br>
+        <a href="http://www.minnesota.edu">MState</a>
+	<p id="CurrentDateID"></p>
+	</footer>
+</div>
+</body>
+</html>

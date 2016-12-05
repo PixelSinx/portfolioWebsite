@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+  <!--
+Name:Brody Holmer
+Date:4/23/16
+Description: JQuery Gallery Page
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Javascript Gallery</title>
+<link href="custom-site.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<script>//preloads secondary images that display when hovered over
+$(document).ready(function() {
+ $('#gallery img').each(function() {
+	var imgFile = $(this).attr('src');
+	var preloadImage = new Image();
+  	var imgExt = /(\.\w{3,4}$)/;
+ 	 preloadImage.src = imgFile.replace(imgExt,'_h$1');
+		
+	$(this).hover(
+		function() {
+			$(this).attr('src', preloadImage.src);
+		},
+		function () {
+			$(this).attr('src', imgFile);
+		}
+	); // end hover
+}); // end each
+ 	
+	$('#gallery a').click(function(evt) {
+		//don't follow link
+		 evt.preventDefault();
+		 //get path to new image
+	   var imgPath = $(this).attr('href');
+		 //get reference to old image
+		 var oldImage = $('#photo img');
+		 			
+			 //create HTML for new image
+			 var newImage = $('<img src="' + imgPath +'">');
+			 //make new image invisible
+			 newImage.hide();
+			 //add to the #photo div
+			 $('#photo').prepend(newImage);
+			 //fade in new image
+			 newImage.fadeIn(1000);
+			 
+			 //fade out old image and remove from DOM
+			 oldImage.fadeOut(1000,function(){
+		     $(this).remove();
+				});		 
+	}); // end click
+		
+	$('#gallery a:first').click();
+}); // end ready
+</script>
+<script>//slides the navigation bar into the frame
+$(document).ready(function() {
+  $('#dashboard').hover(
+     function() {
+		$(this).stop().animate(
+		{
+			left: '0',
+			backgroundColor: 'rgb(255,140,0)'
+		},
+		500,
+		'easeInSine'
+		); // end animate
+	 }, 
+	 function() {
+		 $(this).stop().animate(
+		{
+			left: '-150px',
+			backgroundColor: 'rgb(27,45,94)'
+		},
+		1500,
+		'easeOutBounce'
+		); // end animate
+	 }
+  ); // end hover
+}); // end ready
+</script>
+<script>//open external links in a new window
+$(document).ready(function(){
+ $("a[href^='http'],a[href^='https']").attr('target','_blank');
+}); 
+</script>
+<script>//shows the current date in the footer
+window.onload = function() {
+showDate();
+}
+function showDate() {
+var dNow = new Date();
+var localdate= (dNow.getMonth()+1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
+$('#currentDate').text(localdate)
+document.getElementById("CurrentDateID").innerHTML = localdate;
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+<header>
+    Brody Holmer Javascript
+</header>
+	<div id="dashboard">
+
+
+<div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+</div>
+	</div>
+<div class="content">
+	<div class="main">
+		<h1>Gallery</h1>
+		<p>Mouse over the images below</p>
+		<div id="gallery"> <a href="images/unstyle/workinglate.jpg"><img src="images/style/workinglate.jpg" width="70" height="70" alt="working late"></a> <a href="images/unstyle/website.jpg"><img src="images/style/website.jpg" width="70" height="70" alt="website"></a> <a href="images/unstyle/textbook.jpg"><img src="images/style/textbook.jpg" width="70" height="70" alt="textbook"></a> <a href="images/unstyle/coding.jpg"><img src="images/style/coding.jpg" width="70" height="70" alt="coding"></a> <a href="images/unstyle/code.jpg"><img src="images/style/code.jpg" width="70" height="70" alt="code"></a> <a href="images/unstyle/book.jpg"><img src="images/style/book.jpg" width="70" height="70" alt="book"></a></div>
+		<div id="photo"></div>
+	</div>
+</div>
+    <footer>
+     <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+	<a href="mailto:BrodyHolmer1@gmail.com">BrodyHolmer1@gmail.com</a>
+        <br>
+        <a href="http://www.minnesota.edu">MState</a>
+	<p id="CurrentDateID"></p>
+	</footer>
+</div>
+</body>
+</html>

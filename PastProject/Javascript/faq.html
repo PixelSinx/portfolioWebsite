@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+	<!--
+Name:Brody Holmer
+Date:4/23/16
+Description: JQuery FAQ Page
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<link href="custom-site.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+	//Gives the alert box a double click so that it may be free(double click to bring up a alert box)
+$(document).ready(function() {
+	$('html').dblclick(function() {
+		alert('Master has double clicked, alert box is free!!!');
+	}); // end doubleclick
+	//keypress event
+	$('html').keyup(function(e){
+		if (e.keyCode == 13) {
+		alert('You pressed the enter key!');
+		}
+	});
+	//tooltip when hovering over links
+	$('a').mouseover(function() {
+		$( document ).tooltip();
+	}); // end mouseover
+	//Button that won't submit (Button title changes when clicked)
+	$('#button').click(function() {
+		$(this).val("Question Submitted!");
+	}); // end click
+	//change text field background when clicked
+	$('#textfield').focus(function() {
+		$(this).css('background-color','yellow');
+	}); // end focus
+	//to do list
+	$('form').submit(function(evt){
+		evt.preventDefault();
+	}); // end submit
+	$('#button').click(function() {
+		var $field = $('#textfield')
+		var fieldVal = $field.val();
+		if (fieldVal) { 
+			$('#tasklist').append('<li>' + fieldVal + '</li>' );
+			$field.val('');
+			$field.focus();
+		}
+	})// end click
+	$('#tasklist').on('click','li',function() {
+		console.log($(this));
+		$(this).css({
+			'text-decoration' : 'line-through',
+			'font-weight' : 'bold',
+			'color' : 'lightgrey'
+		}); // end css
+	}); // end on
+}); // end ready
+</script>
+<script>//slides the navigation bar into the frame
+$(document).ready(function() {
+  $('#dashboard').hover(
+     function() {
+		$(this).stop().animate(
+		{
+			left: '0',
+			backgroundColor: 'rgb(255,140,0)'
+		},
+		500,
+		'easeInSine'
+		); // end animate
+	 }, 
+	 function() {
+		 $(this).stop().animate(
+		{
+			left: '-150px',
+			backgroundColor: 'rgb(27,45,94)'
+		},
+		1500,
+		'easeOutBounce'
+		); // end animate
+	 }
+  ); // end hover
+}); // end ready
+</script>
+<script>//open external links in a new window
+$(document).ready(function(){
+ $("a[href^='http'],a[href^='https']").attr('target','_blank');
+}); 
+</script>
+<script>//shows the current date in the footer
+window.onload = function() {
+showDate();
+}
+function showDate() {
+var dNow = new Date();
+var localdate= (dNow.getMonth()+1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
+$('#currentDate').text(localdate)
+document.getElementById("CurrentDateID").innerHTML = localdate;
+}
+</script>
+</head>
+
+<body id="events">
+
+<div class="wrapper">
+	<header>
+	   <h1>Brody Holmer Javascript</h1>
+	</header>
+
+	<div id="dashboard">
+
+
+<div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+</div>
+	</div>
+	<div class="content">
+	<div class="main">
+	<h1>FAQ</h1>
+	<form action="#" method="get">
+	<fieldset><legend>Submit a Question</legend><p><input name="button" type="button" id="button" value="Submit"></p>
+	<p><input name="textfield" id="textfield" type="text"></p></fieldset>
+	</form>
+<h1>Questions Submitted</h1>
+<ul id="tasklist">
+</ul>
+	</div>
+</div>
+<footer>
+	<nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+	<a href="mailto:BrodyHolmer1@gmail.com" title="My E-Mail">BrodyHolmer1@gmail.com</a>
+        <br>
+        <a href="http://www.minnesota.edu" title="Mstates home page">MState</a>
+	<p id="CurrentDateID"></p>
+	</footer>
+</div>
+</body>
+</html>
