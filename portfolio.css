@@ -223,7 +223,9 @@ border-radius: 5px 50px 30px 5px;
    #content {width: auto; max-width: 768px;}
    #featInfo {height: auto; max-width: 768px; padding-bottom: 50px; }
    #featInfo img {width: 75%; height: 75%;}
+   #dashboard {padding:  5px 40px 5px 20px;}
    footer {font-size: 1.1em;}
+   footer nav a {display: block; border: 2px solid rgb(255,140,0);}
  
   ul.tabs {
   text-align: center;
