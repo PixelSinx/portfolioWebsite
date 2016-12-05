@@ -3,38 +3,18 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" href="portfolio.css">
-<link rel="stylesheet" href="slideshow.css">
     <!-- Name: Brody Holmer
          Date: 5/2/15
          Description: Blog Project
     -->
     <title>Portfolio Website Blog Project</title>
 <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="src/ScriptFile.js"></script>
-<script src="src/FeatureCarousel.js"></script>
-<script type="text/javascript">
-      $(document).ready(function() {
-        var carousel = $("#carousel").featureCarousel({
-        });
-
-        $("#but_prev").click(function () {
-          carousel.prev();
-        });
-        $("#but_pause").click(function () {
-          carousel.pause();
-        });
-        $("#but_start").click(function () {
-          carousel.start();
-        });
-        $("#but_next").click(function () {
-          carousel.next();
-        });
-      });
-    </script>
-    
+<script src="src/ScriptFile.js"></script>   
     <!--[if lt IE 9]>
     <script
     src="http://html5shim.googlecode.com/svn/trunk/html5.js">
@@ -60,72 +40,68 @@
     </nav>
     
 </div></div><div id="mainContainer">
-<div id="content"> 
    
     <div id="featInfo">
         <h2 id="headline">Blog Project</h2>
        <img src="images/blog/blog_project.jpg" alt="Blog Project"/>
        <p>The Blog Project was focused around refining my current knowledge of CSS and teaching me a ton of new tricks along the way.
         On this project page I will be going over what I learned during each of the homework assignments, and how that effected the website.</p>               
+    
+    <div class="redux2">
+      <div class="redux" data-tab-title="Project #1">
+        <div id="featInfo">
+            <a href="images/large/Blog_7_large.jpg">
+    <img src="images/blog/Blog_7.jpg" alt="Blog Project"/></a>
+        
+    <p>In the first Homework assignment we learned how to build the basic framework of a website. We learned about all of the different headers, lists, and how to style all of the text differently.  
+    </p>
     </div>
-    
-    <a id="but_prev" href="#">PREV</a> | <a id="but_pause" href="#">PAUSE</a> | <a id="but_start" href="#">START</a> | <a id="but_next" href="#">NEXT</a> 
-  
-    <div class="carousel-container">
-    
-      <div id="carousel">
-        <div class="carousel-feature">
-          <a href="images/large/Blog_7_large.jpg"><img class="carousel-image" alt="Image Caption" src="images/blog/Blog_7.jpg" width="240" height="240"></a>
-          <div class="carousel-caption">
-            <p>
-               In the first Homework assignment we learned how to build the basic framework of a website. We learned about all of the different headers, lists, and how to style all of the text differently.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-feature">
-          <a href="images/large/Blog_9_large.jpg"><img class="carousel-image" alt="Image Caption" src="images/blog/Blog_9.jpg" width="240" height="240"></a>
-          <div class="carousel-caption">
-            <p>
-              In the second homework assignment I added a nav bar and a second webpage that shows how a picture gallery works in CSS, I also added in gradients to the background and sidebar that leads to the blog.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-feature">
-          <a href="images/large/Blog_12_large.jpg"><img class="carousel-image" alt="Image Caption" src="images/blog/Blog_12.jpg" width="240" height="240"></a>
-          <div class="carousel-caption">
-            <p>
-              In the third homework assignment I added two more webpages to the website. One that includes a table (On the about page), and another that includes a form (On the contact Page). I also added some nice styles to the nav bar.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-feature">
-          <a href="images/large/Blog_14_large.jpg"><img class="carousel-image" alt="Image Caption" src="images/blog/Blog_14.jpg" width="240" height="240"></a>
-          <div class="carousel-caption">
-            <p>
-              In the fourth homework assignment I added responsive web design to the website by allowing the website to resize and move items around to fit any size screen. I also added two more sidebars to the main webpage.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-feature">
-          <a href="images/large/Blog_17_large.jpg"><img class="carousel-image" alt="Image Caption" src="images/blog/Blog_17.jpg" width="240" height="240"></a>
-          <div class="carousel-caption">
-            <p>
-              In the fifth homework assignment I added some postioning elements to the nav bar, added print styles to the webpages, moved all internal styles to external style sheets, and updated all comments to the CSS.
-            </p>
-          </div>
-        </div>
       </div>
-    
-      <div id="carousel-left"><img src="images/arrow-left.png" /></div>
-      <div id="carousel-right"><img src="images/arrow-right.png" /></div>
+      <div class="redux" data-tab-title="Project #2"> 
+      <div id="featInfo">
+        <a href="images/large/Blog_9_large.jpg">
+    <img src="images/blog/Blog_9.jpg" alt="Blog Project"/></a>
+        
+    <p> In the second homework assignment I added a nav bar and a second webpage that shows how a picture gallery works in CSS, I also added in gradients to the background and sidebar that leads to the blog.<br>
+    </p>
+    </div>  
+      </div>
+      <div class="redux" data-tab-title="Project #3">  
+      <div id="featInfo">
+        <a href="images/large/Blog_12_large.jpg">
+    <img src="images/blog/Blog_12.jpg" alt="Blog Project"/></a>
+        
+    <p>In the third homework assignment I added two more webpages to the website. One that includes a table (On the about page), and another that includes a form (On the contact Page). I also added some nice styles to the nav bar.
+    </p>
+    </div> 
+      </div>
+      <div class="redux" data-tab-title="Project #4"> 
+      <div id="featInfo">
+        <a href="images/large/Blog_14_large.jpg">
+    <img src="images/blog/Blog_14.jpg" alt="Blog Project"/></a>
+                
+    <p>In the fourth homework assignment I added responsive web design to the website by allowing the website to resize and move items around to fit any size screen. I also added two more sidebars to the main webpage.
+    </p>
+    </div>  
+      </div>
+      <div class="redux" data-tab-title="Project #5"> 
+       <div id="featInfo">
+        <a href="images/large/Blog_17_large.jpg">
+    <img src="images/blog/Blog_17.jpg" alt="Blog Project"/></a>
+                
+    <p>In the fifth homework assignment I added some postioning elements to the nav bar, added print styles to the webpages, moved all internal styles to external style sheets, and updated all comments to the CSS.
+    </p>
+    </div> 
+      </div>
     </div>
-    
-    
+    </div>
+        
+    </div>
     <div id="oldLink">
         <a href="PastProject/Blog/index.html"<h2>Click here to go to the project site</h2></a>
     </div>
     
-</div>    
+</div>
 </div></div>
 </div>
 <footer>
@@ -144,5 +120,5 @@
         <br>
         <a href="http://www.freedigitalphotos.net/">Images used with permission from free-digital-photos.net</a>
 </footer>
-
+<script src="src/swapping.js"></script>
 </html>
