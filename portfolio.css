@@ -8,7 +8,7 @@ arial, sans-serif;}
 #wrapper { margin: auto; width: 95%;
          background-color: #F0F0F0;
         box-shadow: 5px 5px 5px #2e0000; border-radius: 20px 20px 20px 20px;  }
-#mainContainer { margin: auto; width: 90%;}
+#mainContainer { margin: auto; width: 85%;}
 
 img { border-style: solid; border-radius: 20px 20px 20px 20px; max-width: 100%; height: auto;}
 
@@ -216,14 +216,14 @@ border-radius: 5px 50px 30px 5px;
 }
 
 @media (max-width: 768px) {
-   header {width: auto; max-width: 768px;}
+   header {width: auto; max-width: 768px; background-image : url(images/site/logo_mobile.jpg)}
    body { width: auto; }
    nav { max-width: 768px; width: auto;}
    #wrapper {width: auto !important;}
    #content {width: auto; max-width: 768px;}
    #featInfo {height: auto; max-width: 768px; padding-bottom: 50px; }
    #featInfo img {width: 75%; height: 75%;}
-   #dashboard {padding:  5px 40px 5px 20px;}
+   #dashboard {padding:  5px 30px 5px 20px;}
    footer {font-size: 1.1em;}
    footer nav a {display: block; border: 2px solid rgb(255,140,0);}
  
