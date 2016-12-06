@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+Name:Brody Holmer
+Date:4/23/16
+Description: JQuery Home Page
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Webpage</title>
+<link href="custom-site.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="src/readingTime.js"></script>
+<script>//pulls quotes from the articles and displays them in a floating quote box
+$(document).ready(function() {
+$('span.pq').each(function() {
+  var quote=$(this).clone();
+  quote.removeClass('pq');
+  quote.addClass('pullquote');
+  $(this).before(quote);
+  
+}); // end each
+}); // end ready
+</script>
+<script>//Adds links to sources
+$(document).ready(function() {
+var biblioText='';
+$('.main a[href^="http://"]').each(function() {
+  var siteText = $(this).text();
+  var extLink = $(this).attr('href');
+  biblioText += '<li><strong>' + siteText + ":</strong> " + extLink + '</li>\n';
+}); // end each
+if (biblioText) {
+  bibHTML = '<div id="bib"><p>Websites referenced in this document:</p></div>';
+  $(bibHTML).append(biblioText).appendTo($('.main'));}
+}); // end ready
+</script>
+<script>//slides login into view
+$(document).ready(function() {
+  $('#open').click(function(evt) {
+  	 evt.preventDefault();
+  	 if ($('#login form').is(':hidden')) {
+  		$('#login form').fadeIn(300);
+	 	$(this).addClass('close'); 
+  	} else {
+  		$('#login form').slideUp(600);
+	 	$(this).removeClass('close');}	
+  }); // end click
+}); // end ready
+</script>
+<script>//slides the navigation bar into the frame
+$(document).ready(function() {
+  $('#dashboard').hover(
+     function() {
+		$(this).stop().animate(
+		{
+			left: '0',
+			backgroundColor: 'rgb(255,140,0)'
+		},
+		500,
+		'easeInSine'
+		); // end animate
+	 }, 
+	 function() {
+		 $(this).stop().animate(
+		{
+			left: '-150px',
+			backgroundColor: 'rgb(27,45,94)'
+		},
+		1500,
+		'easeOutBounce'
+		); // end animate
+	 }
+  ); // end hover
+}); // end ready
+</script>
+<script>//open external links in a new window
+$(document).ready(function(){
+ $("a[href^='http'],a[href^='https']").attr('target','_blank');
+}); 
+</script>
+<script>//estimates how long it will take to read the page		
+$(function() {
+	$('article').readingTime({
+	wordCountTarget: '.words',
+});
+});</script>
+<script>//shows the current date in the footer
+window.onload = function() {
+showDate();
+}
+function showDate() {
+var dNow = new Date();
+var localdate= (dNow.getMonth()+1) + '/' + dNow.getDate() + '/' + dNow.getFullYear();
+$('#currentDate').text(localdate)
+document.getElementById("CurrentDateID").innerHTML = localdate;
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<header>
+	    <h1>Brody Holmer Javascript</h1>
+	</header>
+	<div id="dashboard">
+<div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+</div></div>
+<div class="content">
+	<div id="login">
+	<a href="form.html"><p id="open">Login</p></a>
+	<form>
+		<p>
+			<label for="username">Username:</label>
+			<input type="text" name="username" id="username">
+		</p>
+		<p>
+			<label for="password">Password: </label>
+			<input type="text" name="password" id="password">
+		</p>
+		<p class="button">
+			<input type="submit" name="button" id="button" value="Submit" >
+		</p>
+	</form>
+	</div>
+<article>
+<div class="main">
+<h1>AMD and NVIDIA, The Next Generation.</h1>
+<p><small><span class="eta"></span> (<span class="words"></span> words)</small></p>
+  <h2>AMD: Polaris</h2>
+  <p>AMDS new GPU (Graphics Processing Unit) architecture, codenamed Polaris will be the first GPU released by AMD that is built on a 14nm process.
+  This will allow AMD to double the amount of transistors from 2015s Fiji architecture, <span class="pq">increasing the amount of transistors from 8.9 billion, up to 18 billion transistors.</span></p>
+  <h2>NVIDIA: Pascal</h2>
+  <p>NVIDIAS new Pascal architecture, aims to increase the power and efficiency of previous generations, by moving to a new 16nm architecture.
+  Along with this new architecture NVIDIA will be unveiling its new NVLink Technology, which will allow the GPU and CPU to transfer data <span class="pq">up to 5 times faster than PCIE 3.0.</span></p>
+  <h2>Conclusion</h2>
+  <p>Both AMD and NVIDIA are making huge strides towards more efficient and powerful graphics processors, while also <span class="pq">developing new technologies that increase the productivity and continutity of all devices</span> in your PC.</p> 
+  <ul>
+	<li><a href="http://wccftech.com/amd-unveils-polaris-11-10-gpu/">WCCFTech (AMD Polaris)</a></li>
+	<li><a href="http://arstechnica.com/gaming/2016/01/amd-confirms-high-end-polaris-gpu-in-development-for-2016/">ArsTechnica (AMD Polaris)</a></li>
+	<li><a href="http://wccftech.com/nvidia-pascal-gpu-analysis/">WCCFTech (NVIDIA Pascal)</a></li>
+  </ul>
+</article>  
+</div>
+	<footer>
+	  <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+	    <li><a href="gallery.html">Gallery</a></li>
+	    <li><a href="bibliography.html">Bibliography</a></li>
+        </ul>
+    </nav>
+	<a href="mailto:BrodyHolmer1@gmail.com">BrodyHolmer1@gmail.com</a>
+        <br>
+        <a href="http://www.minnesota.edu">MState</a>
+	<p id="CurrentDateID"></p>
+	</footer>
+</div>
+</div>
+</body>
+</html>
