@@ -1,8 +1,9 @@
+
 body {
-  background: -webkit-linear-gradient(left top, black , gray); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, black, gray); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, black, gray); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, white , gray); /* Standard syntax */
+  background: -webkit-linear-gradient(left top, white, gray ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, white , gray ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, white , gray ) ; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, white , gray ); /* Standard syntax */
 font-family: verdana,
 arial, sans-serif;}
 #wrapper { margin: auto; width: 95%;
@@ -62,6 +63,7 @@ nav a:hover { color: cyan; }
 	background-color: rgba(255,255,255,.85);
 	color: rgb(0,0,0);
 }
+
 
 #headline {
   font-size: 32px;
