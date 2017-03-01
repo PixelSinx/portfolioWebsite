@@ -17,6 +17,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="src/ScriptFile.js"></script>
+    
     <![endif]-->
 </head>
 <body>
@@ -33,21 +35,30 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="contact.php">Contact Me</a></li>
         </ul>
     </nav>
 </div></div><div id="mainContainer">
 <div id="content">
-<div id="react-app">
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
-    <script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
-    <script src="src/ContactItem.js"></script>
-    <script src="src/ContactForm.js"></script>
-    <script src="src/ContactView.js"></script>
-    <script src="src/ScriptFile.js"></script>  
+    <div id="featInfo">
+<h2 id="headline">Contact Me</h2>
+    </div>
+    <section class="body">    
+    <form action="src/mail.php" method="POST">
+        
+    <label>Name</label>
+    <input name="name" placeholder="Type Here">
+            
+    <label>Email</label>
+    <input name="email" type="email" placeholder="Type Here">
+            
+    <label>Message</label>
+    <textarea name="message" placeholder="Type Here"></textarea>
+            
+    <input id="submit" name="submit" type="submit" value="Submit"> 
+</form>
+    </section>
+    
 </div>    
 </div>
 
@@ -61,7 +72,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="contact.php">Contact Me</a></li>
            </ul>  
         </nav>
         <p id="CurrentDateID"></p>

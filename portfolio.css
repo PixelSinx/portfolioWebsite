@@ -1,9 +1,9 @@
 
 body {
-  background: -webkit-linear-gradient(left top, white, gray ); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, white , gray ); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, white , gray ) ; /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, white , gray ); /* Standard syntax */
+  background: -webkit-linear-gradient( top, white, gray, white ); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, white , gray, white ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, white , gray, white ) ; /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, white , gray, white); /* Standard syntax */
 font-family: verdana,
 arial, sans-serif;}
 #wrapper { margin: auto; width: 95%;
@@ -155,58 +155,72 @@ div.redux2 {
         height: 400px;
         width: 100%;
        }
- 
-.ContactView-title {
-  font-size: 24px;
-  padding: 0 24px;
+/*Contact Form*/ 
+label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+.body {
+    display:block;
+    margin:0 auto;
+    width:576px;
 }
 
-.ContactView-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid #f0f0f0;
+/* Centre the form within the page */
+form {
+    margin:0 auto;
+    width:459px;
 }
 
-.ContactItem {
-  margin: 0;
-  padding: 8px 24px;
-  border-bottom: 1px solid #f0f0f0;
-}
-.ContactItem-name {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-.ContactItem-email {
-  font-size: 14px;
-  margin-top: 4px;
-  font-style: italic;
-  color: #888;
-}
-.ContactItem-description {
-  font-size: 14px;
-  margin-top: 4px;
+/* Style the text boxes */
+input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
 }
 
+textarea {
+	height:213px;
+	background:url(images/textarea-bg.jpg) right no-repeat #efefef;
+}
+input, textarea {
+    width:439px;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
 
-.ContactForm {
-  padding: 8px 24px;
-}
-.ContactForm > input,
-.ContactForm > textarea {
-  display: block;
-  width: 240px;
-  padding: 4px 8px;
-  margin-bottom: 8px;
-  border-radius: 3px;
-  border: 1px solid #888;
-  font-size: 14px;
-}
-.ContactForm > input.ContactForm-error {
-  border-color: #b30e2f;
+#submit {
+    width:127px;
+    height:38px;
+    background-color: rgb(27,45,94);
+    color: white;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
 }
 
+	#submit:hover {
+	    opacity:.9;
+	}
+
+/*End Contact Form*/
 #dashboard {
 width: 200px;
 background-color: rgb(27,45,94);
