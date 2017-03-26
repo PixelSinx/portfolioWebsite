@@ -12,6 +12,13 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+#oldlink {
+  text-align: center;
+  font-size: 2.0em;
+  margin-top: -20px;
+}
+#oldlink a:link {color: black;}
+#oldlink a:visited {color: black;}
 body {
 	line-height: 1.2;
 	background-color: rgb(254,250,246);

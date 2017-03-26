@@ -1,4 +1,10 @@
 
+//unslider scripts
+    jQuery(document).ready(function($) {
+    	$('.my-slider').unslider();
+});
+    
+
 //shows the current date in the footer
 window.onload = function() {
 showDate();
@@ -9,34 +15,6 @@ var localdate= (dNow.getMonth()+1) + '/' + dNow.getDate() + '/' + dNow.getFullYe
 $('#currentDate').text(localdate)
 document.getElementById("CurrentDateID").innerHTML = localdate;
 }
-
-
-//slides the navigation bar into the frame
-
-$(document).ready(function() { 
-  $('#dashboard').hover(
-     function() {
-		$(this).stop().animate(
-		{
-			left: '0',
-			backgroundColor: 'rgb(255,140,0)'
-		},
-		500,
-		'easeInSine'
-		); // end animate
-	 }, 
-	 function() {
-		 $(this).stop().animate(
-		{
-			left: '-215px',
-			backgroundColor: 'rgb(27,45,94)'
-		},
-		1500,
-		'easeOutBounce'
-		); // end animate
-	 }
-  ); // end hover
-}); // end ready
 
 //Opens external links in a new window/tab
 $(document).ready(function(){
@@ -70,59 +48,6 @@ var markerCluster = new MarkerClusterer(map, markers,
         {lat: 46.827632, lng: -95.832673},
       ]
        
-var CONTACT_TEMPLATE = {name: "", email: "", description: "", errors: null};
-
-
-
-//Contact Scripts
-
-function updateNewContact(contact) {
-  setState({ newContact: contact });
-}
-
-
-function submitNewContact() {
-  var contact = Object.assign({}, state.newContact, {key: state.contacts.length + 1, errors: {}});
-  
-  if (!contact.name) {
-    contact.errors.name = ["Please enter your new contact's name"];
-  }
-  if (!/.+@.+\..+/.test(contact.email)) {
-    contact.errors.email = ["Please enter your new contact's email"];
-  }
-
-  setState(
-    Object.keys(contact.errors).length === 0
-    ? {
-        newContact: Object.assign({}, CONTACT_TEMPLATE),
-        contacts: state.contacts.slice(0).concat(contact),
-      }
-    : { newContact: contact }
-  );
-}
-
-
-/*
- * Model
- */
-
-
-// The app's complete current state
-var state = {};
-
-// Make the given changes to the state and perform any required housekeeping
-function setState(changes) {
-  Object.assign(state, changes);
-  
-  ReactDOM.render(
-    React.createElement(ContactView, Object.assign({}, state, {
-      onNewContactChange: updateNewContact,
-      onNewContactSubmit: submitNewContact,
-    })),
-    document.getElementById('react-app')
-  );
-}
-
 // Set initial data
 setState({
   contacts: [

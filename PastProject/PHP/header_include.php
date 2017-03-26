@@ -11,6 +11,8 @@ Description: PHP Header Include
 </head>
 <body>
 <div class="wrapper">
+	 <div id="oldlink">
+    <a href="../../php_project.html"<h2>Click here to go back to the project page</h2></a></div>
 	<header>
 	    <h1>Brody Holmer PHP & MySQL</h1>
 	</header>

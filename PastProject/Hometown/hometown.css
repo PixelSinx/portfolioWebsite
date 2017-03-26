@@ -90,7 +90,13 @@ nav a:hover { color: #F5F5DC; }
 #contentMain img { float: right; width: 50%; padding-top: 20px; max-height: 400px;}
 /* end body content */
 
-
+#oldlink {
+  text-align: center;
+  font-size: 2.0em;
+  margin-bottom: -23px;
+}
+#oldlink a:link {color: white;}
+#oldlink a:visited {color: white;}
 /* footer */
 footer {background-color: green; color: green; padding: 20px; box-shadow: 5px 5px 5px #2e0000; text-align: center;}
 /* end footer */
