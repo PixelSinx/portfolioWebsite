@@ -178,6 +178,13 @@ a:active {
 	textdecoration: underline;
 	font-style: italic;
 }
+
+#oldlink {
+  text-align: center;
+  font-size: 2.0em;
+}
+#oldlink a:link {color: white;}
+#oldlink a:visited {color: white;}
 /* End Link Styles */
 /* Nav Styles */
 nav {width: auto;

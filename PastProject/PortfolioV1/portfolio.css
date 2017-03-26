@@ -40,6 +40,15 @@ nav a:link { color: black;}
 nav a:visited { color: gray; }
 nav a:hover { color: #F5F5DC; }
 
+#oldlink {
+  text-align: center;
+  font-size: 2.0em;
+  background-color: black;
+  margin-bottom: -23px;
+}
+#oldlink a:link {color: white;}
+#oldlink a:visited {color: white;}
+
 #content {padding: 1px 20px 20px 20px;
         background-color: #D8D8D8;}
 #content img { float: right; width: 50%; padding-top: 20px; max-height: 300px;}
