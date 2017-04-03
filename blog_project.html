@@ -4,6 +4,8 @@
 <head>
 <link rel="stylesheet" href="portfolio.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+<link type="text/css" rel="stylesheet" href="tabstyle.css" />
     <!-- Name: Brody Holmer
          Date: 12/5/16
          Description: Blog Project
@@ -29,74 +31,53 @@
         <h1>Brody Holmer Portfolio</h1>
         </div>
     </header>
-<div id="dashboard">
 <div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
         </ul>
     </nav>
     
-</div></div><div id="mainContainer">
-   
+</div><div id="mainContainer">
     <div id="featInfo">
         <h2 id="headline">Blog Project</h2>
        <img src="images/blog/blog_project.jpg" alt="Blog Project"/>
        <p>The Blog Project was focused around refining my current knowledge of CSS and teaching me a ton of new tricks along the way.
         On this project page I will be going over what I learned during each of the homework assignments, and how that effected the website.</p>               
     
-    <div class="redux2">
-      <div class="redux" data-tab-title="Project #1">
-        <div id="featInfo">
-            <a href="images/large/Blog_7_large.jpg">
-    <img src="imageThumbnail/blog/Blog_7.jpg" alt="Blog Project"/></a>
-        
+    <div id="responsiveTabsDemo">
+    <ul>
+        <li><a href="#tab-1"> Assignment #1 </a></li>
+        <li><a href="#tab-2"> Assignment #2 </a></li>
+        <li><a href="#tab-3"> Assignment #3 </a></li>
+        <li><a href="#tab-4"> Assignment #4 </a></li>
+        <li><a href="#tab-5"> Assignment #5 </a></li>
+    </ul>
+    <div id="tab-1"> <a href="images/large/Blog_7_large.jpg">
+    <img src="imageThumbnail/blog/Blog_7.jpg" alt="Blog Project"/></a>     
     <p>In the first Homework assignment we learned how to build the basic framework of a website. We learned about all of the different headers, lists, and how to style all of the text differently.  
-    </p>
-    </div>
-      </div>
-      <div class="redux" data-tab-title="Project #2"> 
-      <div id="featInfo">
-        <a href="images/large/Blog_9_large.jpg">
-    <img src="images/blog/Blog_9.jpg" alt="Blog Project"/></a>
-        
+    </p> </div>
+    <div id="tab-2"> <a href="images/large/Blog_9_large.jpg">
+    <img src="images/blog/Blog_9.jpg" alt="Blog Project"/></a>      
     <p> In the second homework assignment I added a nav bar and a second webpage that shows how a picture gallery works in CSS, I also added in gradients to the background and sidebar that leads to the blog.<br>
-    </p>
-    </div>  
-      </div>
-      <div class="redux" data-tab-title="Project #3">  
-      <div id="featInfo">
-        <a href="images/large/Blog_12_large.jpg">
-    <img src="images/blog/Blog_12.jpg" alt="Blog Project"/></a>
-        
+    </p> </div>
+    <div id="tab-3"> <a href="images/large/Blog_12_large.jpg">
+    <img src="images/blog/Blog_12.jpg" alt="Blog Project"/></a>       
     <p>In the third homework assignment I added two more webpages to the website. One that includes a table (On the about page), and another that includes a form (On the contact Page). I also added some nice styles to the nav bar.
-    </p>
-    </div> 
-      </div>
-      <div class="redux" data-tab-title="Project #4"> 
-      <div id="featInfo">
-        <a href="images/large/Blog_14_large.jpg">
-    <img src="images/blog/Blog_14.jpg" alt="Blog Project"/></a>
-                
+    </p> </div>
+    <div id="tab-4"> <a href="images/large/Blog_14_large.jpg">
+    <img src="images/blog/Blog_14.jpg" alt="Blog Project"/></a>              
     <p>In the fourth homework assignment I added responsive web design to the website by allowing the website to resize and move items around to fit any size screen. I also added two more sidebars to the main webpage.
-    </p>
-    </div>  
-      </div>
-      <div class="redux" data-tab-title="Project #5"> 
-       <div id="featInfo">
-        <a href="images/large/Blog_17_large.jpg">
-    <img src="images/blog/Blog_17.jpg" alt="Blog Project"/></a>
-                
+    </p> </div>
+    <div id="tab-5"> <a href="images/large/Blog_17_large.jpg">
+    <img src="images/blog/Blog_17.jpg" alt="Blog Project"/></a>               
     <p>In the fifth homework assignment I added some postioning elements to the nav bar, added print styles to the webpages, moved all internal styles to external style sheets, and updated all comments to the CSS.
-    </p>
-    </div> 
-      </div>
-    </div>
+    </p> </div>
+</div>
     </div>
         
     </div>
@@ -113,7 +94,6 @@
            <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
@@ -122,5 +102,6 @@
         <p id="CurrentDateID"></p>
         <a href="mailto:1bholmer@gmail.com">1bholmer@gmail.com</a>
 </footer>
-<script src="src/swapping.js"></script>
+<script src="src/jquery.responsiveTabs.js"></script>
+<script src="src/ScriptFile.js"></script>
 </html>

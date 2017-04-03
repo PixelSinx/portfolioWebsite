@@ -1,10 +1,13 @@
+/*main body styles*/
 body {
   background: -webkit-linear-gradient( top, white, gray, white ); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom, white , gray, white ); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom, white , gray, white ) ; /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom, white , gray, white); /* Standard syntax */
 font-family: verdana,
-arial, sans-serif;}
+arial, sans-serif;
+font-size: 18px;}
+/*styles for the wrapper that surrounds the site content*/
 #wrapper {
   margin: auto;
   width: 95%;
@@ -12,16 +15,19 @@ arial, sans-serif;}
   box-shadow: 5px 5px 5px #2e0000;
   border-radius: 20px 20px 20px 20px;
   }
+/*contains the content inside the wrapper better*/
 #mainContainer {
   margin: auto;
   width: 85%;
   }
+/*styles for images on the site*/
 img {
   border-style: solid;
   border-radius: 20px 20px 20px 20px;
   max-width: 100%;
   height: auto;
   }
+/*styles for the site header*/
 .header {
   background-color: rgb(27,45,94);
   height: 75px;
@@ -31,11 +37,16 @@ img {
   font-family: cursive;
   font-style: italic;
 }
+/*styles for the h3 headings on the site*/
 h3 {
+  border: 3px solid orange;
+  border-radius: 10px 10px 10px 10px;
   background-color: rgb(27,45,94);
   text-transform: uppercase;
-  color: #F0F0F0
+  color: #F0F0F0;
+  text-align: center;
   }
+/*navigation styles*/
 nav {
   width: auto;
   margin-top: -30px;
@@ -70,13 +81,15 @@ nav a:visited {
 nav a:hover {
   color: cyan;
   }
-
+/*styles for the page headliner*/
 #headline {
   font-size: 32px;
   font-weight: bold;
   text-decoration: underline;
-  font-style: italic; 
+  font-style: italic;
+  text-align: center;
 }
+/*styles for base and featured page content*/
 #content {
   padding: 20px 20px 20px 20px;
   }
@@ -88,15 +101,12 @@ height: auto;
   max-width: 500px;
   max-height: 350px;
   }
-#news {
-  text-align: center;
-  height: auto;
-  }
-  #PastProjects {
+/*styles for the past projects on the projects page*/
+#PastProjects {
     text-align: center;
     padding-bottom: 20px;
     }
-  #PastProjects img {
+#PastProjects img {
     float: none;
     width: 200px;
     height: 200px;
@@ -138,6 +148,7 @@ span.text-content span {
 ul.img-list li:hover span.text-content {
   opacity: 1;
   }
+/*styles for the footer*/
 footer {
   background-color: rgb(27,45,94);
   color: white;
@@ -162,15 +173,13 @@ footer a:visited {
 footer a:hover {
   color: cyan;
   }
-  
+/*styles for the index page slider*/
 .my-slider img {
   border-style: solid; border-radius: 5px 5px 5px 5px; border-color: black;
   max-width: 100%;
   max-height: 100%;
 }
-.my-slider dots{
-  border-style: solid; border-radius: 5px 5px 5px 5px; border-color: black;
-}
+/*about page skill set*/
 summary {
   font-size: 32px;
   font-weight: bold;
@@ -179,64 +188,17 @@ summary {
   font-style: italic;
   margin-top: 50px;
 }
+/*about page img*/
 #about img{
   float: left;
   margin-right: 20px;
 }
-li.tab {
-  background-color: #FF8000;
-  color: #333;
-  cursor: pointer;
-  float: left;
-  font-size: 120%;
-  list-style: none outside none;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  text-transform: uppercase;
-  width: 130px;
-  border: 1px solid rgb(27,45,94);
-  border-radius: 10px 10px 10px 10px;
-}
-li.tab.selected {
-  background-color: orange;
-  }
-ul.tabs {
-  text-align: center;
-  font-size: 12px;
-  line-height: 1;
-  list-style: none outside none;
-  margin: auto;
-  padding: 5px;
-  position: absolute;
-  top: 0;
-}
-div.redux {
-  margin-top: auto;
-  font-family: "Helvetica", "san-serif";
-  font-size: 24px;
-}
-div.redux2 {
-  background-color: rgb(27,45,94) ;
-  border: 3px solid orange;
-  color: #DDD;
-  font-size: 20px;
-  margin-bottom: 20px;
-  padding: 10px;
-  padding-top: 100px;
-  position: relative;
-  border-radius: 15px 15px 15px 15px;
-}
+/*old links style for projects that link to old websites*/
 #oldLink {
   font-size: 24px;
   text-align: center;
   padding-top: 50px;
 }
-#map {
-        height: 400px;
-        width: 100%;
-       }
 /*Contact Form*/ 
 label {
     display:block;
@@ -288,10 +250,13 @@ input:focus, textarea:focus {
 	    opacity:.9;
 	}
 /*End Contact Form*/
+
+/*styles for repsonsive design on different screen sizes*/
 @media (max-width: 768px) {
    header {width: auto; max-width: 768px; background-image : url(images/site/logo_mobile.jpg)}
    body { width: auto; }
    nav { max-width: 768px; width: auto;}
+   nav a {display: block; border: 2px solid rgb(255,140,0);}
    #wrapper {width: auto !important;}
    #content {width: auto; max-width: 768px;}
    #featInfo {height: auto; max-width: 768px; padding-bottom: 50px; }
@@ -315,12 +280,20 @@ div.redux2 {
   width: 120px;
   height: 60px;
 }
+#about img{
+  float: none;
+  margin-right: 0px;
+}
    }
 
 @media (max-width: 500px){
   div.redux2 {
     padding-top: 350px;
   }
+#about img{
+  float: none;
+  margin-right: 0px;
+}
 }
 
 

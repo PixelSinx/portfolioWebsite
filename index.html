@@ -4,7 +4,9 @@
 <head>
 <link rel="stylesheet" href="portfolio.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="unslider.css">   
+<link rel="stylesheet" href="unslider.css">
+<link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+<link type="text/css" rel="stylesheet" href="tabstyle.css" />
     <!--
          Name: Brody Holmer
          Date: 12/5/16
@@ -17,12 +19,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="src/ScriptFile.js"></script>
-    <!--[if lt IE 9]>
-    <script
-    src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-    </script>
-    <![endif]-->
 </head>
 <body>
 <div id="wrapper">
@@ -36,57 +32,46 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
         </ul>
     </nav>
     </div><div id="mainContainer">
+   <div id="content">
     <div id="featInfo">
         <h2 id="headline">Portfolio Project</h2>
         <div class="my-slider">
 	<ul>
-            <li><img src="images/slider/about_pic.jpg"></img></li>
-            <li><img src="images/slider/HometownProject.jpg"></img></li>
+            <li><img src="images/slider/projects.jpg"></img></li>
+            <li><img src="images/slider/HometownRedone.png"></img></li>
         </ul>
     </div>
   
-     <div class="redux2">
-      <div class="redux" data-tab-title="Home">
-        The Home page was changed to have less redundant clutter (and images), this was achieved by removing the last project and blog sections that already had separate sections, and were not critically important to the home page.
-        I also added a tabbed interface that talks about all of the changes that have happened around the site.
-      </div>
-      <div class="redux" data-tab-title="General UI">  
-        I changed the color scheme, removed a lot of redundant images and links, and also added rounded edges alongside the central wrapper, footer and images.
-      </div>
-      <div class="redux" data-tab-title="Contact"> 
-        A form was added that lets you contact me directly through the site.
-      </div>
-      <div class="redux" data-tab-title="Project Pages"> 
-        The project pages were changed from their original sections of scrolling through the chapters with header, to using a tabbed interfaces. This allowed us to do less scrolling then before, and made it easier for the user to navigate
-        and follow along through a project. I also added links to any of the project sites, so that you can explore them on your own.
-      </div>
-      <div class="redux" data-tab-title="Scripts"> 
-        Some Javascripting was done to add more functionality to the site, like a date feature at the bottom of the screen and also making it so all external links open in a new tab.
-      </div>
-      <div class="redux" data-tab-title="Responsive"> 
-        The new interface was made with a responsive website in mind, which will make it easier to allow the site to scale to different devices, without affecting any of the functionality or look of the site.
-      </div>
-      <div class="redux" data-tab-title="Skeleton CSS"> 
-        I'm testing out the skeleton framework on both the News page, and the Blog page.
-      </div>
-      <div class="redux" data-tab-title="More Projects"> 
-        More project pages have been added, including work I did with Visual Basic, C++, Python, RPG, and more!!!
-      </div>
-      <div class="redux" data-tab-title="Past Projects"> 
-        The past projects were given a quality of life update so that they have links back to there respective project page in the portfolio.
-      </div>
-    </div>
-    </div>
-<div id="content">
-    
+<div id="responsiveTabsDemo">
+    <ul>
+        <li><a href="#tab-1"> Home </a></li>
+        <li><a href="#tab-2"> General UI </a></li>
+        <li><a href="#tab-3"> Contact </a></li>
+        <li><a href="#tab-4"> Project Pages </a></li>
+        <li><a href="#tab-5"> Scripts </a></li>
+        <li><a href="#tab-6"> Responsive </a></li>
+        <li><a href="#tab-7"> More Projects </a></li>
+        <li><a href="#tab-8"> Past Projects </a></li>
+    </ul>
 
+    <div id="tab-1"> The Home page was changed to have less redundant clutter (and images), this was achieved by removing the last project and blog sections that already had separate sections, and were not critically important to the home page.
+        I also added a tabbed interface that talks about all of the changes that have happened around the site. </div>
+    <div id="tab-2"> I changed the color scheme, removed a lot of redundant images and links, and also added rounded edges alongside the central wrapper, footer and images. </div>
+    <div id="tab-3"> A form was added that lets you contact me directly through the site. </div>
+    <div id="tab-4"> The project pages were changed from their original sections of scrolling through the chapters with header, to using a tabbed interfaces. This allowed us to do less scrolling then before, and made it easier for the user to navigate
+        and follow along through a project. I also added links to any of the project sites, so that you can explore them on your own. </div>
+    <div id="tab-5"> Some Javascripting was done to add more functionality to the site, like a date feature at the bottom of the screen and also making it so all external links open in a new tab. </div>
+    <div id="tab-6"> The new interface was made with a responsive website in mind, which will make it easier to allow the site to scale to different devices, without affecting any of the functionality or look of the site. </div>
+    <div id="tab-7"> More project pages have been added, including work I did with Visual Basic, C++, Python, RPG, and more!!! </div>
+    <div id="tab-8"> The past projects were given a quality of life update so that they have links back to there respective project page in the portfolio. </div>
+</div>
+    </div>
     </div></div>
 </div>
 
@@ -95,7 +80,6 @@
            <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
@@ -105,6 +89,7 @@
         <a href="mailto:1bholmer@gmail.com">1bholmer@gmail.com</a>
 </footer>
 <script src="src/unslider.js"></script>
-<script src="src/swapping.js"></script>
+<script src="src/jquery.responsiveTabs.js"></script>
+<script src="src/ScriptFile.js"></script>
 </body>
 </html>
