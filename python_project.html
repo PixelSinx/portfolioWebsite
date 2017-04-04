@@ -4,6 +4,8 @@
 <head>
 <link rel="stylesheet" href="portfolio.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+<link type="text/css" rel="stylesheet" href="tabstyle.css" />
     <!-- Name: Brody Holmer
          Date: 12/5/16
          Description: Python
@@ -35,7 +37,6 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
@@ -49,71 +50,49 @@
         <h2 id="headline">Python</h2>
         <img src="images/python/pythonlogo.jpg" alt="Python"/>
         <p>This page was designed to show all of the assignments I did in my Python class.</p>                 
-    </div>
     
-    <div class="redux2">
-      <div class="redux" data-tab-title="Assignment #1">
-        <div id="featInfo">
-            <a href="images/python/ch1.jpg">
+    
+    <div id="responsiveTabsDemo">
+    <ul>
+        <li><a href="#tab-1"> Assignment #1 </a></li>
+        <li><a href="#tab-2"> Assignment #2 </a></li>
+        <li><a href="#tab-3"> Assignment #3 </a></li>
+        <li><a href="#tab-4"> Assignment #4 </a></li>
+        <li><a href="#tab-5"> Assignment #5 </a></li>
+        <li><a href="#tab-6"> Assignment #6 </a></li>
+        <li><a href="#tab-7"> Assignment #7 </a></li>
+    </ul>
+
+    <div id="tab-1"> <a href="images/python/ch1.jpg">
     <img src="images/python/ch1.jpg" alt="Python #1"/></a>
-        
     <p>In the first Python assignment, I wrote a program that takes in the cost of a meal, and then outputs the total cost including tax and a tip.    
-    </p>
-    </div>
-      </div>
-      <div class="redux" data-tab-title="Assignment #2"> 
-      <div id="featInfo">
-        <a href="images/python/ch2.jpg">
+    </p> </div>
+    <div id="tab-2"> <a href="images/python/ch2.jpg">
     <img src="images/python/ch2.jpg" alt="Python #2"/></a>
-        
     <p>In the second Python assignment, I wrote a program that calculates the yearly cost for your car, after inputing your monthly costs.<br> 
-    </p>
-    </div>  
-      </div>
-      <div class="redux" data-tab-title="Assignment #3">  
-      <div id="featInfo">
-        <a href="images/python/ch3.jpg">
-    <img src="images/python/ch3.jpg" alt="Python #3"/></a>
-        
+    </p> </div>
+    <div id="tab-3"> <a href="images/python/ch3.jpg">
+    <img src="images/python/ch3.jpg" alt="Python #3"/></a>  
     <p>In the third Python assignment, I wrote a program that takes 2 primary colors, and outputs the combination color that they make.     
-    </p>
-    </div> 
-      </div>
-      <div class="redux" data-tab-title="Assignment #4"> 
-      <div id="featInfo">
-        <a href="images/python/ch4.jpg">
-    <img src="images/python/ch4.jpg" alt="Python #4"/></a>
-                
+    </p> </div>
+    <div id="tab-4"> <a href="images/python/ch4.jpg">
+    <img src="images/python/ch4.jpg" alt="Python #4"/></a>        
     <p>In the fourth Python assignment, I wrote a program that takes the MPH and hours traveled, and calculates how far you've traveled for each hours.     
-    </p>
-    </div>  
-      </div>
-      <div class="redux" data-tab-title="Assignment #5"> 
-       <div id="featInfo">
-        <a href="images/python/ch5.jpg">
+    </p> </div>
+    <div id="tab-5"> <a href="images/python/ch5.jpg">
     <img src="images/python/ch5.jpg" alt="Python #5"/></a>         
     <p>In the fifth Python assignment, I wrote a program that takes 5 test scores, shows them alongside their letter grade, and then displays the average grade.
-    </p>
-    </div> 
-      </div>
-      <div class="redux" data-tab-title="Assignment #6"> 
-       <div id="featInfo">
-        <a href="images/python/ch6.jpg">
+    </p> </div>
+    <div id="tab-6"> <a href="images/python/ch6.jpg">
     <img src="images/python/ch6.jpg" alt="Python #6"/></a>         
     <p>In the sixth Python assignment, I wrote a program that checks to see if an account number is valid, by comparing it to a file.
-    </p>
-    </div> 
-      </div>
-      <div class="redux" data-tab-title="Assignment #7"> 
-       <div id="featInfo">
-        <a href="images/python/ch7.jpg">
+    </p> </div>
+    <div id="tab-7"> <a href="images/python/ch7.jpg">
     <img src="images/python/ch7.jpg" alt="Python #7"/></a>         
     <p>In the seventh Python assignment, I wrote a program that checks how many lowercase letters, uppercase letters, digits, and spaces are in a file.
-    </p>
-    </div> 
-      </div>
-    </div>
-
+    </p> </div>
+    
+</div>
 </div></div>
 </div>
 <footer>
@@ -121,7 +100,6 @@
            <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
@@ -130,5 +108,6 @@
         <p id="CurrentDateID"></p>
         <a href="mailto:1bholmer@gmail.com">1bholmer@gmail.com</a>
 </footer>
-<script src="src/swapping.js"></script>
+<script src="src/jquery.responsiveTabs.js"></script>
+<script src="src/ScriptFile.js"></script>
 </html>

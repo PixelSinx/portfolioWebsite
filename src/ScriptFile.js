@@ -1,9 +1,13 @@
+//tabbed interface scripts
+$('#responsiveTabsDemo').responsiveTabs({
+    startCollapsed: 'accordion'
+});
 
 //unslider scripts
     jQuery(document).ready(function($) {
     	$('.my-slider').unslider();
 });
-    
+
 
 //shows the current date in the footer
 window.onload = function() {
@@ -48,10 +52,4 @@ var markerCluster = new MarkerClusterer(map, markers,
         {lat: 46.827632, lng: -95.832673},
       ]
        
-// Set initial data
-setState({
-  contacts: [
-    {key: 1, name: "Brody Holmer", email: "1bholmer@gmail.com"},
-  ],
-  newContact: Object.assign({}, CONTACT_TEMPLATE),
-});
+

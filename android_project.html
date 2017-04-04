@@ -4,6 +4,8 @@
 <head>
 <link rel="stylesheet" href="portfolio.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+<link type="text/css" rel="stylesheet" href="tabstyle.css" />
     <!-- Name: Brody Holmer
          Date: 12/5/16
          Description: Android
@@ -16,11 +18,6 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="src/ScriptFile.js"></script>
- <!--[if lt IE 9]>
- <script
-    src="http://html5shim.googlecode.com/svn/trunk/html5.js">
-    </script>
-    <![endif]-->
 </head>
 <body>
 <div id="wrapper">
@@ -29,20 +26,18 @@
         <h1>Brody Holmer Portfolio</h1>
         </div>
     </header>
-    <div id="dashboard">
 <div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
         </ul>
     </nav>
     
-</div></div><div id="mainContainer">
+</div><div id="mainContainer">
 <div id="content"> 
      
     <div id="featInfo">
@@ -50,55 +45,39 @@
         <img src="images/android/logo.jpg" alt="Android"/>
         <p>This page is designed to show all of the projects I worked on in my Android class.</p>
         
-        <div class="redux2">
-      <div class="redux" data-tab-title="Assignment #1">
-        <div id="featInfo">
-            <a href="images/android/ch2_1.jpg">
+        <div id="responsiveTabsDemo">
+    <ul>
+        <li><a href="#tab-1"> Assignment #1 </a></li>
+        <li><a href="#tab-2"> Assignment #2 </a></li>
+        <li><a href="#tab-3"> Assignment #3 </a></li>
+        <li><a href="#tab-4"> Assignment #4 </a></li>
+        <li><a href="#tab-5"> Assignment #5 </a></li>
+    </ul>
+
+    <div id="tab-1"> <a href="images/android/ch2_1.jpg">
     <img src="images/android/ch2_1.jpg" alt="Android #1"/></a>
             <a href="images/android/ch2_2.jpg">
-    <img src="images/android/ch2_2.jpg" alt="Android #1"/></a>
-        
+    <img src="images/android/ch2_2.jpg" alt="Android #1"/></a> 
     <p>In my first real Android assignment (as the first actual assignment was just a blank screen that said hello). I created an app the displays the picture of a recipe, and then allows you to go and look up how to make that recipe (I don't actually know if this recipe is real or not).     
     </p>
-    </div>
-      </div>
-      <div class="redux" data-tab-title="Assignment #2"> 
-      <div id="featInfo">
-        <a href="images/android/ch3.jpg">
-    <img src="images/android/ch3.jpg" alt="Android #2"/></a>
-        
+    </div </div>
+    <div id="tab-2"> <a href="images/android/ch3.jpg">
+    <img src="images/android/ch3.jpg" alt="Android #2"/></a>       
     <p>In the second Android assignment, I created an app that calculates the total cost to go and see a concert. You could input how many tickets you wanted, and then select from a list of bands to see how much the total cost was.
-    </p>
-    </div>  
-      </div>
-      <div class="redux" data-tab-title="Assignment #3">  
-      <div id="featInfo">
-        <a href="images/android/ch4.jpg">
-    <img src="images/android/ch4.jpg" alt="Android #3"/></a>
-        
+    </p> </div>
+    <div id="tab-3"> <a href="images/android/ch4.jpg">
+    <img src="images/android/ch4.jpg" alt="Android #3"/></a>      
     <p>In the third assignment, I created an app that can convert a persons weight to either kilograms, or pounds, based on whichever one they selected.     
-    </p>
-    </div> 
-      </div>
-      <div class="redux" data-tab-title="Assignment #4"> 
-      <div id="featInfo">
-        <a href="images/android/ch5.jpg">
-    <img src="images/android/ch5.jpg" alt="Android #4"/></a>
-                
+    </p> </div>
+    <div id="tab-4"> <a href="images/android/ch5.jpg">
+    <img src="images/android/ch5.jpg" alt="Android #4"/></a>               
     <p>In the fourth assignment, I created an app that calculates the total cost of a bundle of pictures, based on how many, and what size pictures you wanted.  
-    </p>
-    </div>  
-      </div>
-      <div class="redux" data-tab-title="Assignment #5"> 
-       <div id="featInfo">
-        <a href="images/android/ch6.jpg">
+    </p> </div>
+    <div id="tab-5"> <a href="images/android/ch6.jpg">
     <img src="images/android/ch6.jpg" alt="Android #5"/></a>         
     <p>In the final assignment, I created a tour guide app. The top two buttons link you to their respective web pages, and the last three are pictures of those places.
-    </p>
-    </div> 
-      </div>
-        
-    </div>
+    </p> </div>
+</div>
 </div>
 </div></div>
 
@@ -108,7 +87,6 @@
            <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="contact.html">Contact Me</a></li>
@@ -117,5 +95,6 @@
         <p id="CurrentDateID"></p>
         <a href="mailto:1bholmer@gmail.com">1bholmer@gmail.com</a>
 </footer>
-<script src="src/swapping.js"></script>
+<script src="src/jquery.responsiveTabs.js"></script>
+<script src="src/ScriptFile.js"></script>
 </html>
