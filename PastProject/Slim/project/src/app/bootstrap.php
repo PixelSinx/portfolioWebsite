@@ -2,6 +2,9 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+$app = new \Slim\App([
+]);
+
 $container = $app->getContainer();
 
 $container['view'] = function ($container) {
