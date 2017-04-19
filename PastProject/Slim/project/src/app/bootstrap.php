@@ -1,28 +1,35 @@
 <?php
 
-session_start();
+require __DIR__ . '/../vendor/autoload.php';
 
-require_once '../vendor/autoload.php';
+$app = new \Slim\App([
+    'settings' => [
+        'displayErrorDetails' => true,
+    ]
+]);
 
-$container = new \Slim\Container;
+$container = $app->getContainer();
 
-$container['flash'] = function ($c) {
-    return new \Slim\Flash\Messages();
-};
-
-$container['view'] = function ($c) {
-    $view = new \Slim\Views\Twig('../resources/views');
-
+$container['view'] = function ($container) {
+    $view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
+        'cache' => false,
+    ]);
+    
     $view->addExtension(new \Slim\Views\TwigExtension(
-        $c['router'],
-        $c['request']->getUri()
+        $container['router'],
+        $container['request']->getUri()
     ));
-
-    $view->getEnvironment()->addGlobal('flash', $c['flash']);
 
     return $view;
 };
 
-$app = new \Slim\App($container);
+$container['notFoundHandler'] = function ($container) {
+    return function ($request, $response) use ($container) {
+        $container->view->render($response, 'errors/404.twig');
+        return $response->withStatus(404);
+    };
+};
 
-require_once 'routes.php';
+$app->get('/', function ($request, $response) {
+    return $this->view->render($response, 'home.twig');
+});
