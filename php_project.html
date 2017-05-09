@@ -4,6 +4,8 @@
 <head>
 <link rel="stylesheet" href="portfolio.css">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="responsive-tabs.css" />
+<link type="text/css" rel="stylesheet" href="tabstyle.css" />
     <!-- Name: Brody Holmer
          Date: 12/5/16
          Description: PHP Project
@@ -48,11 +50,19 @@
         <h2 id="headline">PHP Project</h2>
         <img src="images/site/php.jpg" alt="PHP Project"/>
         <p>In the PHP project, I was tasked with creating a website that was connected to a database. The site also had to be able to make changes inside the database, and also be able to show you all of the data in the database.</p>          
-    
+<div id="responsiveTabsDemo">
+    <ul>
+        <li><a href="#tab-1"> PHP Website </a></li>
+    </ul>
+
+    <div id="tab-1"> <a href="images/php/phpIndex.jpg" target="_blank">
+    <img src="images/php/phpIndexThumb.jpg" alt="PHP Index"/></a>    
+    <p> This Picture shows the Index page fo the PHP site, which explains what each of the different pages did, the site is no longer
+    available for viewing as I no longer have access to the database that the site worked with.
+    </p> </div>
+</div>   
     <div>
     </div></div>
-    <div id="oldLink">
-    <a href="PastProject/PHP/index.php"<h2>Click here to go to the PHP site</h2></a>
 </div>
 </div>
 </div></div>
@@ -71,5 +81,6 @@
         <p id="CurrentDateID"></p>
         <a href="mailto:1bholmer@gmail.com">1bholmer@gmail.com</a>
 </footer>
-
+<script src="src/jquery.responsiveTabs.js"></script>
+<script src="src/ScriptFile.js"></script>
 </html>
